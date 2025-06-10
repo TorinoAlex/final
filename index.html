@@ -42,9 +42,13 @@
             background: #ecd29a;
             color: #ecd29a;
             text-align: center;
-            padding: 80px 0;
+            padding: 120px 0 80px; /* Увеличили верхний отступ */
             position: relative;
             overflow: hidden;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         header::before {
@@ -62,6 +66,12 @@
         header .container {
             position: relative;
             z-index: 1;
+            padding-top: 40px; /* Добавили отступ сверху */
+        }
+        
+        h1, h2, h3 {
+            text-align: center;
+            width: 100%;
         }
         
         h1 {
@@ -148,6 +158,8 @@
         .radio-group {
             display: flex;
             gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
         
         .radio-option {
@@ -174,6 +186,7 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            margin-top: 20px; /* Добавили отступ сверху */
         }
         
         button:hover {
@@ -237,11 +250,7 @@
         .location-link:hover {
             color: #0a2752;
             border-color: var(--secondary);
-        
-        
         }
-        
-      
         
         /* Таймлайн стили */
         .timeline {
@@ -316,6 +325,7 @@
         
         .timeline-description {
             color: var(--dark);
+            white-space: nowrap; /* Запрещаем перенос текста */
         }
         
         footer {
@@ -364,24 +374,27 @@
         }
         
         @media (max-width: 768px) {
+            header {
+                padding: 100px 0 60px;
+                min-height: 350px;
+            }
+            
             h1 {
                 font-size: 2.1rem;
                 line-height: 1.2;
-
             }
             
             .name {
-        white-space: nowrap; /* Запрещаем перенос слов */
-                }
-            
+                white-space: nowrap;
             }
+            
             h2 {
                 font-size: 2rem;
             }
             
             .rsvp-form {
                 padding: 30px 20px;
-     
+            }
             
             /* Адаптивный таймлайн */
             .timeline::after {
@@ -406,6 +419,10 @@
             .left::after, .right::after {
                 left: 21px;
             }
+            
+            .timeline-description {
+                white-space: normal; /* Разрешаем перенос текста в мобильной версии */
+            }
         }
     </style>
 </head>
@@ -427,8 +444,6 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372951417678!2d37.61531071593095!3d55.75199998055313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2z0JzQvtGB0LrQvtCy0YHQutC40Lkg0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1620000000000!5m2!1sru!2sru" allowfullscreen="" loading="lazy"></iframe>
             </div>
             <a href="https://goo.gl/maps/..." class="location-link" target="_blank">Открыть в картах</a>
-            
-            </div>
             
             <h3>Программа мероприятия</h3>
             <div class="timeline">
@@ -456,8 +471,6 @@
                         <div class="timeline-description">Караоке</div>
                     </div>
                 </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -479,6 +492,7 @@
                         <div class="radio-option">
                             <input type="radio" id="attending-maybe" name="attending" value="maybe">
                             <label for="attending-no">Определюсь позднее</label>
+                        </div>
                     </div>
                 </div>
                 <p>Пожалуйста, подтвердите участие до 1 июля</p>
