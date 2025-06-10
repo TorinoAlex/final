@@ -10,7 +10,7 @@
             --primary: #D4AF37; /* Основной золотистый цвет */
             --primary-light: #FFD700; /* Светло-золотой */
             --primary-dark: #996515; /* Темно-золотой */
-            --secondary:#353333;
+            --secondary:#0a2752;
             --accent: #D4AF37;
             --light: #ecf0f1;
             --dark: #0a2752;
@@ -26,7 +26,7 @@
             font-family: 'Montserrat', sans-serif;
             line-height: 1.6;
             color: var(--dark);
-            background-color: #ecd29a;
+            background-color: #f9f9f9;
         }
         
         .container {
@@ -39,7 +39,7 @@
         }
         
         header {
-            background: #000000;
+            background: #ecd29a;
             color: #ecd29a;
             text-align: center;
             padding: 80px 0;
@@ -88,7 +88,7 @@
         .date-badge {
             display: inline-block;
             background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
-            color: #ecd29a;
+            color: #000;
             padding: 10px 25px;
             border-radius: 50px;
             font-weight: 600;
@@ -121,7 +121,7 @@
         }
         
         .section-light {
-            background-color: #ecd29a;
+            background-color: white;
             box-shadow: 0 5px 25px rgba(0,0,0,0.05);
         }
         
@@ -238,6 +238,11 @@
             color: #d3cbcb00;
             border-color: var(--primary);
         
+        
+        }
+        
+      
+        
         /* Таймлайн стили */
         .timeline {
             position: relative;
@@ -315,7 +320,7 @@
         
         footer {
             background-color: var(--secondary);
-            color: #ecd29a;
+            color: white;
             padding: 40px 0;
             text-align: center;
         }
@@ -376,12 +381,7 @@
             
             .rsvp-form {
                 padding: 30px 20px;
-            }
-            
-            .dress-code {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+     
             
             /* Адаптивный таймлайн */
             .timeline::after {
@@ -428,17 +428,6 @@
             </div>
             <a href="https://goo.gl/maps/..." class="location-link" target="_blank">Открыть в картах</a>
             
-            <h3>Дресс-код</h3>
-            <div class="dress-code">
-                <div class="dress-code-item">
-                    <span>Коктейльный</span>
-                </div>
-                <div class="dress-code-item">
-                    <span>Элегантный</span>
-                </div>
-                <div class="dress-code-item">
-                    <span>Яркие акценты</span>
-                </div>
             </div>
             
             <h3>Программа мероприятия</h3>
@@ -496,6 +485,7 @@
                             <label for="attending-no">Определюсь позднее</label>
                     </div>
                 </div>
+                <p>Пожалуйста, подтвердите участие до 1 июля</p>
                 <button type="submit">Отправить ответ</button>
             </form>
         </div>
@@ -510,9 +500,6 @@
                     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
                 </div>
                 <div class="footer-item">
-                    <h3>Дополнительно</h3>
-                    <p>Пожалуйста, подтвердите участие до 1 июля</p>
-                    <p>Будем рады видеть вас!</p>
                 </div>
             </div>
         </div>
